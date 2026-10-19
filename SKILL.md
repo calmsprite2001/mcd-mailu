@@ -114,5 +114,5 @@ scripts/run.py             主流程，支持 --demo
 scripts/gen_fixture.py     演示数据生成器
 fixtures/demo_orders.json  人工构造的脱敏样本
 references/scene_rules.md  场景识别词典（开源接受补充）
-demo/index.html            离线演示页
+docs/index.html            离线演示页
 ```

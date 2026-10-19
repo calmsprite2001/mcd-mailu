@@ -63,7 +63,7 @@ def main(argv: list[str]) -> int:
     parser.add_argument(
         "--out",
         default="",
-        help="输出路径，默认 demo/index.html（--demo）或 output/mailu_card.html",
+        help="输出路径，默认 docs/index.html（--demo）或 output/mailu_card.html",
     )
     args = parser.parse_args(argv[1:])
 
@@ -92,7 +92,7 @@ def main(argv: list[str]) -> int:
     if args.out:
         out = Path(args.out)
     elif args.demo:
-        out = ROOT / "demo" / "index.html"
+        out = ROOT / "docs" / "index.html"
     else:
         out = ROOT / "output" / "mailu_card.html"
     path = render_card(story, tagged, out)

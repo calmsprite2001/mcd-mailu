@@ -2,6 +2,10 @@
 
 > 别的工具告诉你「该点什么」。麦途做的是相反的事——**读懂你已经点的。**
 
+**在线预览** → https://calmsprite2001.github.io/mcd-mailu/
+
+不用装任何东西、不用申请 Token，打开就是一张由 88 单样本生成的足迹卡。
+
 基于麦当劳官方 MCP 的消费轨迹与场景叙事 Skill。读取你的历史订单，识别出「这次在机场」「这次是赶早班」「这次在机场连点了两单」，把你的麦当劳历史讲成一个**每句话都能回溯到真实订单**的故事，输出一张可截图分享的轨迹卡。
 
 麦当劳程序员创意开发大赛参赛作品。
@@ -35,7 +39,7 @@
 
 ## 效果长什么样
 
-不开 Token、不连网络，直接打开 [`demo/index.html`](demo/index.html) 就能看到完整效果。它由 `fixtures/demo_orders.json` 里 88 单人工构造的样本生成。
+不开 Token、不连网络，直接打开 [`docs/index.html`](docs/index.html) 就能看到完整效果。它由 `fixtures/demo_orders.json` 里 88 单人工构造的样本生成。
 
 同一套代码，两种讲述方式：
 
@@ -73,7 +77,7 @@
 git clone https://github.com/calmsprite2001/mcd-mailu.git
 cd mcd-mailu
 python scripts/run.py --demo
-# 直接用浏览器打开 demo/index.html
+# 直接用浏览器打开 docs/index.html
 ```
 
 零依赖，纯标准库，Python 3.10+。
@@ -142,7 +146,7 @@ scripts/
   gen_fixture.py          演示数据生成器
 fixtures/demo_orders.json 88 单人工构造样本
 references/scene_rules.md 场景识别词典（欢迎补充）
-demo/index.html           离线演示页
+docs/index.html           离线演示页
 ```
 
 ## 声明
