@@ -1,0 +1,8 @@
+.env
+*.env
+fixtures/*.real.json
+raw/
+__pycache__/
+*.pyc
+output/
+.DS_Store
