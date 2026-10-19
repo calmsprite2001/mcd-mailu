@@ -70,9 +70,10 @@
 ### 方式一：不用 Token，直接看效果
 
 ```bash
-git clone <this-repo> && cd mcd-mailu
+git clone https://github.com/calmsprite2001/mcd-mailu.git
+cd mcd-mailu
 python scripts/run.py --demo
-# 打开 output/mailu_card.html
+# 直接用浏览器打开 demo/index.html
 ```
 
 零依赖，纯标准库，Python 3.10+。

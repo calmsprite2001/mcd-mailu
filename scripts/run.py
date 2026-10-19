@@ -60,7 +60,11 @@ def print_report(report: CleanReport, label: str) -> None:
 def main(argv: list[str]) -> int:
     parser = argparse.ArgumentParser(description="麦途：把麦当劳历史订单读成一个故事")
     parser.add_argument("--demo", action="store_true", help="使用内置演示数据，不连 MCP")
-    parser.add_argument("--out", default="", help="输出路径，默认 output/mailu_card.html")
+    parser.add_argument(
+        "--out",
+        default="",
+        help="输出路径，默认 demo/index.html（--demo）或 output/mailu_card.html",
+    )
     args = parser.parse_args(argv[1:])
 
     if args.demo:
@@ -85,7 +89,12 @@ def main(argv: list[str]) -> int:
     print(f"\n叙事模式：{story.mode}")
     print(f"首屏结论：{story.headline}")
 
-    out = Path(args.out) if args.out else ROOT / "output" / "mailu_card.html"
+    if args.out:
+        out = Path(args.out)
+    elif args.demo:
+        out = ROOT / "demo" / "index.html"
+    else:
+        out = ROOT / "output" / "mailu_card.html"
     path = render_card(story, tagged, out)
     print(f"\n卡片已生成：{path}")
     return 0
